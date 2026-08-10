@@ -89,7 +89,8 @@ SELECT
     stage,
     CAST(amount AS DOUBLE)                              AS amount_usd,
     created_qtr,
-    initcap(trim(source_raw))                           AS lead_source,
+    upper(substr(trim(source_raw), 1, 1))
+      || lower(substr(trim(source_raw), 2))             AS lead_source,
     stage IN ('Closed Won')                             AS is_won,
     stage IN ('Closed Won','Closed Lost')               AS is_closed,
     stage NOT IN ('Closed Won','Closed Lost')           AS is_open
