@@ -6,7 +6,7 @@ Replace these before going live. Search each string across the repo and swap in 
 | Placeholder | Where | Notes |
 |-------------|-------|-------|
 | `assets/resume.pdf` | site + nav "Résumé" button | Drop your actual PDF at this path. |
-| `https://github.com/vishal-mahendra` | `index.html`, READMEs, `DEPLOY.md` | Confirm your exact handle. |
+| `https://github.com/vishcooks` | `index.html`, READMEs, `DEPLOY.md` | Your GitHub handle. |
 | `https://www.linkedin.com/in/vishal-mahendra` | `index.html` | Confirm your exact LinkedIn slug. |
 | `vishal.mahendra001@gmail.com` | `index.html` contact | Confirm the email you want public. |
 | `https://your-domain.pages.dev` | `github-profile/README.md` | Your live Cloudflare URL. |

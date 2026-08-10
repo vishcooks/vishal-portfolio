@@ -2,7 +2,7 @@
   GITHUB PROFILE README
   --------------------------------------------------------------
   To use this: create a NEW repo named EXACTLY your username
-  (e.g. `vishal-mahendra/vishal-mahendra`), make it public, and
+  (e.g. `vishcooks/vishcooks`), make it public, and
   drop this file in as README.md. GitHub renders it on your profile.
 -->
 

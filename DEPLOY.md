@@ -24,7 +24,7 @@ git add .
 git commit -m "Portfolio: one-page site + live dashboard + Streamlit demo"
 git branch -M main
 # create an empty repo named `vishal-portfolio` on github.com first, then:
-git remote add origin https://github.com/vishal-mahendra/vishal-portfolio.git
+git remote add origin https://github.com/vishcooks/vishal-portfolio.git
 git push -u origin main
 ```
 
@@ -42,7 +42,7 @@ git push -u origin main
 
 ### Alternative: GitHub Pages (simplest)
 Repo → **Settings → Pages → Source: Deploy from a branch → `main` / `/root`**.
-Live at `https://vishal-mahendra.github.io/vishal-portfolio/`.
+Live at `https://vishcooks.github.io/vishal-portfolio/`.
 *(Cloudflare is preferred: unlimited bandwidth, faster CDN, cleaner custom-domain setup.)*
 
 ---
@@ -51,7 +51,7 @@ Live at `https://vishal-mahendra.github.io/vishal-portfolio/`.
 1. Make sure `streamlit_app/` is in the pushed repo (it is).
 2. Go to **share.streamlit.io** → sign in with GitHub → **Create app**.
 3. Settings:
-   - **Repository:** `vishal-mahendra/vishal-portfolio`
+   - **Repository:** `vishcooks/vishal-portfolio`
    - **Branch:** `main`
    - **Main file path:** `streamlit_app/app.py`
 4. **Deploy.** You'll get a URL like `https://vishal-gtm.streamlit.app`.
@@ -86,7 +86,7 @@ Live at `https://vishal-mahendra.github.io/vishal-portfolio/`.
 ---
 
 ## 6. GitHub profile README (the real portfolio for technical roles)
-1. Create a **new** repo named **exactly** your username: `vishal-mahendra`. Make it **public**, add a README.
+1. Create a **new** repo named **exactly** your username: `vishcooks`. Make it **public**, add a README.
 2. Copy `github-profile/README.md` into it as `README.md`. Update the live-site URL.
 3. On your profile → **Customize your pins** → pin your **6 best** repos (see the table in that README).
 4. Each pinned repo needs: a README, an architecture diagram (see `projects/.../README.md` for the Mermaid pattern), a screenshot, one honest result, and a live link.
