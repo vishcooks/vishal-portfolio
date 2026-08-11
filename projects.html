@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Vishal Mahendra</title>
+  <meta name="description" content="Analytics-engineering and GenAI systems from raw data to boardroom decisions — dbt + Snowflake, Cortex, Power BI/Tableau, PySpark." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark">VM</span>
+        <span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="is-active">Projects</a>
+        <a href="about.html">About</a>
+        <a href="shiro.html">Shiro</a>
+        <a href="resume.html">Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" style="padding-top:72px">
+      <div class="section__head reveal">
+        <p class="index">Projects</p>
+        <h2 class="section__title">From raw data to boardroom decisions</h2>
+        <p class="section__sub">dbt + Snowflake models powering $300M+ ARR planning, GenAI dashboards on Cortex, Salesforce-connected BI, and the pipelines and AI-augmented delivery behind them.</p>
+      </div>
+
+      <!-- filter chips -->
+      <div class="filters reveal">
+        <button class="chip is-active" data-filter="all">All work <span class="count">6</span></button>
+        <button class="chip" data-filter="analytics-engineering">Analytics Engineering <span class="count">2</span></button>
+        <button class="chip" data-filter="genai">GenAI <span class="count">2</span></button>
+        <button class="chip" data-filter="bi">BI &amp; Semantic <span class="count">1</span></button>
+        <button class="chip" data-filter="data-engineering">Data Engineering <span class="count">2</span></button>
+      </div>
+
+      <!-- featured live demo -->
+      <div class="demo reveal">
+        <div class="demo__body">
+          <span class="demo__badge"><span class="dot dot--pulse"></span>Live demo · try this one</span>
+          <h3>Customer VOC &amp; GTM Command Center</h3>
+          <p>A public rebuild of the shape of my Snowflake work, running live in your browser: a DuckDB
+          medallion model driving pipeline &amp; bookings, product-adoption and Voice-of-Customer signals,
+          churn-risk accounts, and an auto-generated insight narrative. Synthetic data; no proprietary anything.</p>
+          <ul class="tags"><li>Streamlit</li><li>DuckDB</li><li>Medallion SQL</li><li>VOC</li><li>Cortex-style narrative</li></ul>
+          <div class="project__links">
+            <a class="btn btn--primary btn--sm" href="https://vishal-portfolio-2rmueqhxr3m6hufeistz4g.streamlit.app/" target="_blank" rel="noopener">Open full-screen ↗</a>
+            <a href="https://github.com/vishcooks/vishal-portfolio/tree/main/streamlit_app" target="_blank" rel="noopener">How it's built →</a>
+          </div>
+        </div>
+        <div class="demo__frame">
+          <span class="demo__url">vishal-portfolio…streamlit.app</span>
+          <iframe src="https://vishal-portfolio-2rmueqhxr3m6hufeistz4g.streamlit.app/?embed=true" title="Customer VOC & GTM Command Center" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:0">
+      <div class="work-grid">
+        <article class="card project reveal" data-category="genai analytics-engineering">
+          <div class="project__meta"><span class="project__cat">GenAI · Product</span><span class="project__num">01</span></div>
+          <h3>Customer VOC &amp; Product Adoption</h3>
+          <p>GenAI-powered dashboards in Streamlit on Snowflake, using Cortex Analyst over a Bronze/Silver/Gold model to give revenue &amp; product leadership real-time account health, adoption, and churn-risk visibility.</p>
+          <ul class="tags"><li>Snowflake Cortex</li><li>Streamlit</li><li>Medallion</li><li>Gainsight</li></ul>
+          <div class="metrics"><div class="metric"><b>40%</b><span>faster exec cycles</span></div><div class="metric"><b>Real-time</b><span>account health</span></div></div>
+        </article>
+
+        <article class="card project reveal" data-category="analytics-engineering">
+          <div class="project__meta"><span class="project__cat">Analytics Engineering</span><span class="project__num">02</span></div>
+          <h3>GTM Single Source of Truth</h3>
+          <p>dbt staging &amp; mart models on Snowflake powering Pipeline &amp; Bookings, Predictive Churn and Forecasting — adopted by the CFO as the single source of truth for $300M+ ARR planning.</p>
+          <ul class="tags"><li>dbt</li><li>Snowflake</li><li>Semantic layer</li><li>Salesforce</li></ul>
+          <div class="metrics"><div class="metric"><b>$300M+</b><span>ARR powered</span></div><div class="metric"><b>75%</b><span>less manual prep</span></div></div>
+        </article>
+
+        <article class="card project reveal" data-category="bi">
+          <div class="project__meta"><span class="project__cat">BI &amp; Semantic</span><span class="project__num">03</span></div>
+          <h3>Salesforce Win/Loss &amp; Whitespace</h3>
+          <p>Star-schema Power BI &amp; Tableau semantic models for Win/Loss, Attach Rate/Whitespace and Partner analysis, natively connected to Salesforce across multi-million-row datasets for 3 teams.</p>
+          <ul class="tags"><li>Power BI (DAX, M)</li><li>Tableau</li><li>Star-schema</li><li>Salesforce</li></ul>
+          <div class="metrics"><div class="metric"><b>40%</b><span>faster turnaround</span></div><div class="metric"><b>3 teams</b><span>self-serve</span></div></div>
+        </article>
+
+        <article class="card project reveal" data-category="data-engineering">
+          <div class="project__meta"><span class="project__cat">Data Engineering</span><span class="project__num">04</span></div>
+          <h3>PySpark + Delta Lake ELT</h3>
+          <p>Architected an ELT pipeline that migrated 15M+ historical records with automated schema evolution, backed by a Python data-quality reconciliation suite performing end-to-end cell-level validation.</p>
+          <ul class="tags"><li>PySpark</li><li>Delta Lake</li><li>Python</li><li>Data quality</li></ul>
+          <div class="metrics"><div class="metric"><b>15M+</b><span>records migrated</span></div><div class="metric"><b>100%</b><span>data accuracy</span></div></div>
+        </article>
+
+        <article class="card project reveal" data-category="data-engineering">
+          <div class="project__meta"><span class="project__cat">Data Engineering</span><span class="project__num">05</span></div>
+          <h3>Microsoft Fabric Dataflow Gen2</h3>
+          <p>Replaced rigid monthly data models with daily Fabric Dataflow Gen2 streaming jobs, consolidating 3 legacy pipelines and cutting delivery lag while improving freshness for downstream BI.</p>
+          <ul class="tags"><li>Microsoft Fabric</li><li>Dataflow Gen2</li><li>ELT</li></ul>
+          <div class="metrics"><div class="metric"><b>3→1</b><span>pipelines consolidated</span></div><div class="metric"><b>30%</b><span>less delivery lag</span></div></div>
+        </article>
+
+        <article class="card project reveal" data-category="genai analytics-engineering">
+          <div class="project__meta"><span class="project__cat">AI-Augmented Delivery</span><span class="project__num">06</span></div>
+          <h3>MCP-Connected, Agent-Assisted Delivery</h3>
+          <p>Deliver Power BI semantic-model and dbt/Snowflake changes through MCP-connected, AI-agent-assisted workflows (Claude Code, Devin, Atlassian Rovo) under governance guardrails — accelerating delivery while holding review and test standards.</p>
+          <ul class="tags"><li>MCP</li><li>Claude Code</li><li>Devin</li><li>Atlassian Rovo</li></ul>
+          <div class="metrics"><div class="metric"><b>Governed</b><span>guardrails held</span></div><div class="metric"><b>Faster</b><span>delivery cycles</span></div></div>
+        </article>
+      </div>
+
+      <div class="prose reveal" style="margin-top:44px">
+        <p>Want the full detail, with dates and stack?</p>
+        <a class="btn btn--primary" href="resume.html">View my résumé</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html"><span class="brand__mark">VM</span><span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span></a>
+          <p>Analytics Engineer building the single source of truth for GTM &amp; product. Open to conversations about Snowflake, dbt, and GenAI-powered BI.</p>
+          <a class="footer__email" href="mailto:vishal.mahendra001@gmail.com">vishal.mahendra001@gmail.com</a>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="shiro.html">Shiro</a><a href="resume.html">Résumé ↗</a>
+        </div>
+        <div class="footer__col">
+          <h4>Elsewhere</h4>
+          <a href="https://www.linkedin.com/in/vishal-mahendra" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/vishcooks" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© <span id="year"></span> Vishal Mahendra</span>
+        <span>Hand-built with HTML, CSS &amp; JavaScript · Cloudflare Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

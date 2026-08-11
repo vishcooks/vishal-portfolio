@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résumé — Vishal Mahendra</title>
+  <meta name="description" content="Résumé of Vishal Mahendra, Analytics Engineer." />
+  <meta name="theme-color" content="#4f46e5" />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <div class="backdrop" aria-hidden="true"></div>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html" aria-label="Home">
+        <span class="brand__mark">VM</span>
+        <span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span>
+      </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="shiro.html">Shiro</a>
+        <a href="resume.html" class="is-active">Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section" style="padding-top:64px">
+      <div class="resume__head reveal">
+        <div>
+          <p class="index">Résumé</p>
+          <h2 class="section__title">The full résumé, inline</h2>
+          <p class="section__sub">Read it here or grab the PDF — full stack, experience, and certifications.</p>
+        </div>
+        <div class="resume__actions">
+          <a class="btn btn--primary" href="assets/resume.pdf" download>Download PDF ↓</a>
+          <a class="btn btn--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab ↗</a>
+        </div>
+      </div>
+      <div class="resume__viewer reveal">
+        <object data="assets/resume.pdf#view=FitH" type="application/pdf" aria-label="Résumé PDF">
+          <div class="resume__fallback">
+            <p class="muted">Your browser can’t display the PDF inline (common on mobile).</p>
+            <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a>
+          </div>
+        </object>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html"><span class="brand__mark">VM</span><span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span></a>
+          <p>Analytics Engineer building the single source of truth for GTM &amp; product. Open to conversations about Snowflake, dbt, and GenAI-powered BI.</p>
+          <a class="footer__email" href="mailto:vishal.mahendra001@gmail.com">vishal.mahendra001@gmail.com</a>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="shiro.html">Shiro</a><a href="resume.html">Résumé ↗</a>
+        </div>
+        <div class="footer__col">
+          <h4>Elsewhere</h4>
+          <a href="https://www.linkedin.com/in/vishal-mahendra" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/vishcooks" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© <span id="year"></span> Vishal Mahendra</span>
+        <span>Hand-built with HTML, CSS &amp; JavaScript · Cloudflare Pages</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

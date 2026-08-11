@@ -1,20 +1,24 @@
 # vishal-portfolio
 
 Personal portfolio site for **Vishal Mahendra — Analytics Engineer**.
-One-page, hand-built (no build step), with a **live open-data dashboard** rendered in-page.
+Multi-page, hand-built (no build step), with an embedded **live Streamlit dashboard**.
 
 - **Live site:** `https://<your-project>.pages.dev` (Cloudflare Pages)
-- **Design:** near-black canvas · single mint accent · Swiss grid · console/terminal restraint
-- **Live data:** USGS earthquake feed (no API key) → ECharts, refreshed every 60s
-- **SQL/BI demo:** `streamlit_app/` — DuckDB medallion model (bronze → silver → gold)
+- **Design:** light · minimalist · single indigo accent · Swiss grid · subtle motion
+- **Live demo:** `streamlit_app/` — Customer VOC & GTM command center on a DuckDB medallion model (bronze → silver → gold), embedded on Home & Projects
+- **Pages:** Home · Projects · About · Shiro · Résumé
 
 ## Structure
 ```
-index.html                 # the whole site
+index.html                 # Home (hero + architecture card + selected work)
+projects.html              # Projects (filters + featured live demo + cards)
+about.html                 # About (bio + skills + certs + education)
+shiro.html                 # Shiro (pet page; drop assets/img/shiro.jpg)
+resume.html                # Résumé (embedded PDF)
 assets/css/styles.css      # design system
-assets/js/main.js          # live data + ECharts + interactions
+assets/js/main.js          # reveal, count-up, mobile nav, project filters
 assets/img/favicon.svg
-assets/resume.pdf          # <-- drop your résumé PDF here
+assets/resume.pdf          # résumé PDF
 streamlit_app/             # embeddable SQL/BI dashboard
 github-profile/README.md   # profile README template
 projects/                  # per-project case-study READMEs

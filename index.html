@@ -4,295 +4,187 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vishal Mahendra — Analytics Engineer</title>
-  <meta name="description" content="Analytics Engineer building dbt + Snowflake data models and GenAI-powered BI that power $300M+ ARR planning, forecasting, and product analytics." />
-
-  <!-- Open Graph / social preview -->
+  <meta name="description" content="Analytics Engineer building dbt + Snowflake models and GenAI-powered BI — the single source of truth for $300M+ ARR planning, forecasting, and product analytics." />
   <meta property="og:title" content="Vishal Mahendra — Analytics Engineer" />
-  <meta property="og:description" content="dbt · Snowflake · SQL · Power BI/Tableau · GenAI-powered BI. Turning raw field & product data into governed, self-serve analytics." />
+  <meta property="og:description" content="dbt · Snowflake · SQL · Power BI/Tableau · GenAI-powered BI." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-image.png" />
-  <meta name="theme-color" content="#0a0a0b" />
-
+  <meta name="theme-color" content="#4f46e5" />
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
-
-  <!-- Fonts: Space Grotesk (display) + JetBrains Mono (labels/data) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 <body>
-  <!-- Skip link for a11y -->
   <a class="skip-link" href="#work">Skip to work</a>
-
-  <!-- Grain / grid backdrop -->
   <div class="backdrop" aria-hidden="true"></div>
 
   <!-- ============ NAV ============ -->
-  <header class="nav" id="top">
+  <header class="nav">
     <div class="container nav__inner">
-      <a class="brand" href="#top" aria-label="Home">
+      <a class="brand" href="index.html" aria-label="Home">
         <span class="brand__mark">VM</span>
-        <span class="brand__status"><span class="dot"></span>available</span>
+        <span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span>
       </a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="nav__links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#resume">Résumé</a>
-        <a href="#work">Work</a>
-        <a href="#dashboard">Live Dashboard</a>
-        <a href="#contact">Contact</a>
+        <a href="index.html" class="is-active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="shiro.html">Shiro</a>
+        <a href="resume.html">Résumé</a>
       </nav>
-      <a class="btn btn--ghost nav__resume" href="assets/resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
     </div>
   </header>
 
   <main class="container">
     <!-- ============ HERO ============ -->
-    <section class="hero" id="hero">
-      <div class="hero__copy reveal">
-        <p class="eyebrow">Analytics Engineer · Bengaluru, IN</p>
-        <h1 class="hero__title">
-          I build the <span class="accent">single source of truth</span> behind data-driven decisions.
-        </h1>
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow">Analytics Engineer · GTM &amp; Product</p>
+        <h1 class="hero__title">Vishal<br />Mahendra</h1>
         <p class="hero__sub">
-          I design <strong>dbt + Snowflake</strong> models and <strong>GenAI-powered BI</strong> that turn raw
-          field &amp; product data into governed, self-serve analytics — powering
-          <strong>$300M+ ARR</strong> planning, forecasting, and product-adoption insight for leadership.
+          I build the <strong>dbt + Snowflake</strong> models and <strong>GenAI-powered BI</strong> behind
+          data-driven decisions — the single source of truth for revenue and product leadership.
         </p>
-        <div class="hero__cta">
-          <a class="btn btn--primary" href="#work">View work</a>
-          <a class="btn btn--ghost" href="#dashboard">See a live dashboard</a>
+        <div class="hero__stats">
+          <div class="hstat"><span class="hstat__num" data-count="300" data-prefix="$" data-suffix="M+">$0</span><span class="hstat__label">ARR planning powered</span></div>
+          <div class="hstat"><span class="hstat__num" data-count="75" data-suffix="%">0</span><span class="hstat__label">less manual reporting</span></div>
+          <div class="hstat"><span class="hstat__num" data-count="40" data-suffix="%">0</span><span class="hstat__label">faster turnaround</span></div>
         </div>
-        <ul class="hero__meta">
-          <li><span>Stack</span> Snowflake · dbt · SQL · Python</li>
-          <li><span>BI</span> Power BI · Tableau · Streamlit</li>
-          <li><span>Certs</span> SnowPro Core · PL-300</li>
-        </ul>
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="projects.html">See the work</a>
+          <a class="btn btn--ghost" href="resume.html">Résumé</a>
+        </div>
       </div>
 
-      <!-- Live console: real open data, no API key -->
-      <aside class="console reveal" aria-label="Live data console">
-        <div class="console__bar">
-          <span class="console__title">live_feed.usgs</span>
-          <span class="console__live"><span class="dot dot--pulse"></span>LIVE</span>
+      <!-- architecture card -->
+      <aside class="arch" aria-label="GTM analytics architecture">
+        <div class="arch__bar">
+          <span class="k">gtm analytics · architecture</span>
+          <span class="arch__live"><span class="dot dot--pulse"></span>GOVERNED</span>
         </div>
-        <div class="console__body">
-          <p class="console__caption">Real-time earthquakes · last 24h (USGS open API)</p>
-          <div class="console__stats">
-            <div class="stat">
-              <span class="stat__label">events</span>
-              <span class="stat__value" id="q-count">—</span>
-            </div>
-            <div class="stat">
-              <span class="stat__label">max mag</span>
-              <span class="stat__value" id="q-max">—</span>
-            </div>
-            <div class="stat">
-              <span class="stat__label">avg mag</span>
-              <span class="stat__value" id="q-avg">—</span>
-            </div>
-          </div>
-          <div class="console__spark" id="spark"></div>
-          <p class="console__foot">
-            <span id="q-updated">syncing…</span>
-            <span class="mono muted">refresh 60s</span>
-          </p>
+        <div class="arch__row"><div class="k">source</div><div class="v">Salesforce · Product usage · Finance</div></div>
+        <div class="arch__conn">↓</div>
+        <div class="arch__row"><div class="k">ingest</div><div class="v">Fivetran / PySpark → Snowflake RAW</div></div>
+        <div class="arch__conn">↓</div>
+        <div class="arch__nodes">
+          <div class="arch__node"><div class="n">Bronze</div><div class="s">raw</div></div>
+          <div class="arch__node"><div class="n">Silver</div><div class="s">cleaned · tested</div></div>
+          <div class="arch__node is-gold"><div class="n">Gold</div><div class="s">marts · metrics</div></div>
         </div>
+        <div class="arch__conn">↓</div>
+        <div class="arch__row"><div class="k">delivered</div><div class="v">Tableau · Power BI · Cortex &amp; Streamlit apps</div></div>
+        <p class="arch__foot">One governed model — Salesforce to boardroom, tested and documented.</p>
       </aside>
     </section>
 
-    <!-- ============ KPI STRIP ============ -->
-    <section class="kpis reveal" aria-label="Impact metrics">
-      <div class="kpi"><span class="kpi__num" data-count="300" data-prefix="$" data-suffix="M+">$0</span><span class="kpi__label">ARR planning owned</span></div>
-      <div class="kpi"><span class="kpi__num" data-count="15" data-suffix="M+">0</span><span class="kpi__label">records migrated</span></div>
-      <div class="kpi"><span class="kpi__num" data-count="75" data-suffix="%">0</span><span class="kpi__label">less manual reporting</span></div>
-      <div class="kpi"><span class="kpi__num" data-count="40" data-suffix="%">0</span><span class="kpi__label">faster analyst turnaround</span></div>
-    </section>
-
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <p class="index">01 — About</p>
-      <div class="about">
-        <div class="about__lead reveal">
-          <h2>Analytics engineer who builds it and owns it.</h2>
-          <p>
-            4+ years across the full ELT lifecycle — from PySpark &amp; Delta Lake pipelines and
-            Medallion-architecture modeling in Snowflake, to Power BI / Tableau delivery and
-            Streamlit apps powered by Snowflake Cortex. I sit inside the Product org, partnering
-            with Product Managers, Product Strategy, and Product &amp; Engineering leadership up to
-            C-staff to make data trustworthy, documented, and genuinely self-serve.
-          </p>
-        </div>
-        <ul class="about__how reveal">
-          <li><span class="mono muted">01</span><span class="how__text"><strong>Documentation-first.</strong> Every model ships with tested metric definitions and lineage.</span></li>
-          <li><span class="mono muted">02</span><span class="how__text"><strong>Insight over method.</strong> Lead with the decision the data unlocks, not the pipeline.</span></li>
-          <li><span class="mono muted">03</span><span class="how__text"><strong>AI as a force multiplier.</strong> GenAI for SQL generation, docs, and conversational analytics.</span></li>
-          <li><span class="mono muted">04</span><span class="how__text"><strong>Global-ready.</strong> Comprehensive handoffs so work progresses 24/7 without real-time oversight.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ============ RÉSUMÉ ============ -->
-    <section class="section" id="resume">
-      <p class="index">02 — Résumé</p>
-      <div class="resume__head reveal">
-        <div>
-          <h2 class="section__title">The full résumé, inline</h2>
-          <p class="section__sub">Read it here or grab the PDF — full stack, experience, and certifications.</p>
-        </div>
-        <div class="resume__actions">
-          <a class="btn btn--primary" href="assets/resume.pdf" download>Download PDF ↓</a>
-          <a class="btn btn--ghost" href="assets/resume.pdf" target="_blank" rel="noopener">Open in new tab ↗</a>
-        </div>
-      </div>
-      <div class="resume__viewer reveal">
-        <object data="assets/resume.pdf#view=FitH" type="application/pdf" aria-label="Résumé PDF">
-          <div class="resume__fallback">
-            <p class="muted">Your browser can’t display the PDF inline (common on mobile).</p>
-            <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a>
-          </div>
-        </object>
-      </div>
-    </section>
-
-    <!-- ============ WORK ============ -->
+    <!-- ============ SELECTED WORK ============ -->
     <section class="section" id="work">
-      <p class="index">03 — Selected Work</p>
-      <h2 class="section__title reveal">Projects, told as decisions unlocked</h2>
+      <div class="section__head reveal">
+        <p class="index">01 — Selected work</p>
+        <h2 class="section__title">Systems that turn data into decisions</h2>
+        <p class="section__sub">Analytics-engineering and GenAI work I've taken from raw data to boardroom — starting with a public, clickable dashboard you can try yourself.</p>
+      </div>
 
-      <!-- Featured -->
-      <article class="project project--featured reveal">
-        <div class="project__head">
-          <span class="tag tag--accent">Featured</span>
+      <div class="demo reveal">
+        <div class="demo__body">
+          <span class="demo__badge"><span class="dot dot--pulse"></span>Live demo · try this one</span>
+          <h3>Customer VOC &amp; GTM Command Center</h3>
+          <p>A public rebuild of the shape of my Snowflake work, running live in your browser: a DuckDB
+          medallion model (Bronze → Silver → Gold) driving pipeline &amp; bookings, product-adoption and
+          Voice-of-Customer signals, churn-risk accounts, and an auto-generated insight narrative. Synthetic
+          data; no proprietary anything.</p>
+          <ul class="tags"><li>Streamlit</li><li>DuckDB</li><li>Medallion SQL</li><li>VOC</li><li>Cortex-style narrative</li></ul>
           <div class="project__links">
-            <a href="#" data-link="repo">Repo ↗</a>
-            <a href="#dashboard" data-link="live">Live demo ↓</a>
+            <a class="btn btn--primary btn--sm" href="https://vishal-portfolio-2rmueqhxr3m6hufeistz4g.streamlit.app/" target="_blank" rel="noopener">Open full-screen ↗</a>
+            <a href="projects.html">See all projects →</a>
           </div>
         </div>
-        <h3>GTM Single Source of Truth — dbt + Snowflake</h3>
-        <p class="project__story">
-          <span class="lead-in">Problem.</span> Leadership reconciled pipeline, bookings &amp; forecast from
-          conflicting spreadsheets. <span class="lead-in">Build.</span> Production dbt staging &amp; mart
-          models on Snowflake with tested, documented metric definitions and a semantic layer.
-          <span class="lead-in">Impact.</span> Adopted by the CFO as the single source of truth for
-          <strong>$300M+ ARR</strong> planning; manual report prep cut <strong>75%</strong>.
-        </p>
-        <ul class="chips"><li>dbt</li><li>Snowflake</li><li>Medallion</li><li>Semantic layer</li><li>Salesforce</li></ul>
-      </article>
+        <div class="demo__frame">
+          <span class="demo__url">vishal-portfolio…streamlit.app</span>
+          <iframe src="https://vishal-portfolio-2rmueqhxr3m6hufeistz4g.streamlit.app/?embed=true" title="Customer VOC & GTM Command Center" loading="lazy"></iframe>
+        </div>
+      </div>
 
-      <div class="project-grid">
-        <article class="project reveal">
-          <div class="project__links"><a href="#dashboard" data-link="live">Live demo ↓</a></div>
-          <h3>Customer VOC — GenAI on Snowflake Cortex</h3>
-          <p class="project__story">
-            Product-adoption &amp; Voice-of-Customer analytics in Streamlit over a Bronze/Silver/Gold model,
-            using Cortex Analyst for natural-language insight into feature adoption, account health &amp;
-            churn risk — cutting executive analysis cycles <strong>40%</strong>.
-          </p>
-          <ul class="chips"><li>Cortex Analyst</li><li>Streamlit</li><li>GenAI</li><li>Gainsight</li></ul>
+      <div class="work-grid reveal" style="margin-top:20px">
+        <article class="card project">
+          <div class="project__meta"><span class="project__cat">Analytics Engineering</span><span class="project__num">01</span></div>
+          <h3>GTM Single Source of Truth</h3>
+          <p>dbt staging &amp; mart models on Snowflake for Pipeline, Bookings &amp; Forecasting — tested, documented, adopted by the CFO.</p>
+          <div class="metrics"><div class="metric"><b>$300M+</b><span>ARR powered</span></div><div class="metric"><b>75%</b><span>less manual prep</span></div></div>
         </article>
-
-        <article class="project reveal">
-          <div class="project__links"><a href="#" data-link="repo">Repo ↗</a></div>
-          <h3>Salesforce-connected BI — Win/Loss &amp; Whitespace</h3>
-          <p class="project__story">
-            Star-schema Power BI / Tableau semantic models natively connected to Salesforce across
-            multi-million-row datasets for 3 teams — cutting analyst query turnaround <strong>40%</strong>
-            and eliminating manual spreadsheet pulls.
-          </p>
-          <ul class="chips"><li>Power BI</li><li>Tableau</li><li>Star-schema</li><li>Salesforce</li></ul>
-        </article>
-
-        <article class="project reveal">
-          <div class="project__links"><a href="#" data-link="repo">Repo ↗</a></div>
-          <h3>PySpark + Delta Lake ELT — 15M+ records</h3>
-          <p class="project__story">
-            Migrated 15M+ historical records with automated schema evolution, backed by a Python
-            data-quality reconciliation suite performing end-to-end cell-level validation — sustaining
-            <strong>100% data accuracy</strong>.
-          </p>
-          <ul class="chips"><li>PySpark</li><li>Delta Lake</li><li>Data quality</li><li>Python</li></ul>
-        </article>
-
-        <article class="project reveal">
-          <div class="project__links"><a href="#" data-link="repo">Repo ↗</a></div>
-          <h3>Fabric Dataflow Gen2 — daily streaming</h3>
-          <p class="project__story">
-            Replaced rigid monthly models with daily Microsoft Fabric Dataflow Gen2 jobs, consolidating
-            3 legacy pipelines and cutting delivery lag <strong>30%</strong>.
-          </p>
-          <ul class="chips"><li>Microsoft Fabric</li><li>Dataflow Gen2</li><li>ELT</li></ul>
+        <article class="card project">
+          <div class="project__meta"><span class="project__cat">GenAI · Product</span><span class="project__num">02</span></div>
+          <h3>Customer VOC &amp; Product Adoption</h3>
+          <p>GenAI dashboards on Snowflake Cortex over a medallion model — real-time account health, adoption &amp; churn-risk for leadership.</p>
+          <div class="metrics"><div class="metric"><b>40%</b><span>faster exec cycles</span></div><div class="metric"><b>Real-time</b><span>account health</span></div></div>
         </article>
       </div>
     </section>
 
-    <!-- ============ LIVE DASHBOARD ============ -->
-    <section class="section" id="dashboard">
-      <p class="index">04 — Live Dashboard</p>
-      <div class="dash__head reveal">
-        <h2 class="section__title">Real-time analytics, rendered in-page</h2>
-        <p class="section__sub">
-          Not a screenshot. This panel queries a live open dataset (USGS global seismic feed),
-          transforms it in the browser, and renders it — the same insight → visual flow I build in production.
-        </p>
+    <!-- ============ WHAT I WORK ON ============ -->
+    <section class="section section--tint">
+      <div class="section__head reveal">
+        <p class="index">02 — What I work on</p>
+        <h2 class="section__title">From raw data to the boardroom</h2>
+        <p class="section__sub">The problems I love solving.</p>
       </div>
-
-      <div class="dash">
-        <div class="dash__kpis reveal">
-          <div class="dash-kpi"><span class="dash-kpi__label">events / 24h</span><span class="dash-kpi__val" id="d-count">—</span></div>
-          <div class="dash-kpi"><span class="dash-kpi__label">max magnitude</span><span class="dash-kpi__val" id="d-max">—</span></div>
-          <div class="dash-kpi"><span class="dash-kpi__label">avg magnitude</span><span class="dash-kpi__val" id="d-avg">—</span></div>
-          <div class="dash-kpi"><span class="dash-kpi__label">M4.5+ events</span><span class="dash-kpi__val" id="d-strong">—</span></div>
-        </div>
-        <div class="dash__charts">
-          <div class="chart-card reveal">
-            <h4>Magnitude distribution</h4>
-            <div class="chart" id="chart-hist"></div>
-          </div>
-          <div class="chart-card reveal">
-            <h4>Seismic activity — hourly</h4>
-            <div class="chart" id="chart-timeline"></div>
-          </div>
-        </div>
-
-        <!-- Embed slot for a deployed Streamlit / Tableau Public dashboard -->
-        <div class="embed reveal">
-          <div class="embed__head">
-            <h4>SQL / BI demo — Streamlit + DuckDB</h4>
-            <span class="mono muted">medallion model · synthetic GTM data</span>
-          </div>
-          <div class="embed__frame" id="embed-slot">
-            <iframe src="https://vishal-portfolio-2rmueqhxr3m6hufeistz4g.streamlit.app/?embed=true"
-                    title="GTM Pipeline & Bookings — SQL demo" loading="lazy"></iframe>
-          </div>
-        </div>
+      <div class="focus-grid reveal">
+        <div class="focus"><span class="n">01</span><h4>Analytics Engineering</h4><p>dbt + Snowflake medallion models, tested metric definitions, and semantic layers as the single source of truth.</p></div>
+        <div class="focus"><span class="n">02</span><h4>GenAI &amp; Cortex</h4><p>Conversational analytics and auto-generated insight narratives that put natural-language answers in front of leaders.</p></div>
+        <div class="focus"><span class="n">03</span><h4>BI &amp; Semantic Layers</h4><p>Executive Power BI &amp; Tableau on star-schema models, natively connected to Salesforce at multi-million-row scale.</p></div>
+        <div class="focus"><span class="n">04</span><h4>Data Quality at Scale</h4><p>PySpark + Delta Lake ELT with schema evolution and cell-level reconciliation sustaining 100% accuracy.</p></div>
+        <div class="focus"><span class="n">05</span><h4>Product Analytics &amp; VOC</h4><p>Embedded in the product org — feature adoption, account health, and Voice-of-Customer signals via Gainsight.</p></div>
+        <div class="focus"><span class="n">06</span><h4>AI-Augmented Delivery</h4><p>MCP-connected, agent-assisted delivery (Claude Code, Devin, Rovo) under governance — faster, without cutting review standards.</p></div>
       </div>
     </section>
 
-    <!-- ============ CONTACT ============ -->
-    <section class="section section--contact" id="contact">
-      <p class="index">05 — Contact</p>
-      <div class="contact reveal">
-        <h2>Let’s build the source of truth.</h2>
-        <p>Open to Analytics Engineer / BI roles in global GTM &amp; product orgs.</p>
-        <div class="contact__links">
-          <a class="btn btn--primary" href="mailto:vishal.mahendra001@gmail.com">Email me</a>
-          <a class="btn btn--ghost" href="https://www.linkedin.com/in/vishal-mahendra" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="btn btn--ghost" href="https://github.com/vishcooks" target="_blank" rel="noopener">GitHub ↗</a>
+    <!-- ============ ABOUT TEASER ============ -->
+    <section class="section">
+      <div class="section__head reveal">
+        <p class="index">03 — About me</p>
+      </div>
+      <div class="prose reveal">
+        <p>I'm an Analytics Engineer at Smarsh, sitting inside the Product organization — partnering with Product
+        Managers, Product Strategy, and Product &amp; Engineering leadership up to C-staff to make GTM and product
+        data trustworthy, documented, and genuinely self-serve.</p>
+        <p>Over 4+ years I've taken analytics from raw data to boardroom: dbt + Snowflake models powering $300M+
+        ARR planning, GenAI dashboards on Cortex, and BI that revenue and product leaders actually trust.</p>
+        <div class="hero__cta" style="margin-top:24px">
+          <a class="btn btn--ghost" href="about.html">More about me</a>
+          <a class="btn btn--ghost" href="shiro.html">Meet Shiro</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <span class="mono muted">© <span id="year"></span> Vishal Mahendra</span>
-      <span class="mono muted">Built with HTML · ECharts · live open data — deployed on Cloudflare Pages</span>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html"><span class="brand__mark">VM</span><span class="brand__id"><span class="brand__name">Vishal Mahendra</span><span class="brand__tag">ANALYTICS ENGINEERING · GENAI</span></span></a>
+          <p>Analytics Engineer building the single source of truth for GTM &amp; product. Open to conversations about Snowflake, dbt, and GenAI-powered BI.</p>
+          <a class="footer__email" href="mailto:vishal.mahendra001@gmail.com">vishal.mahendra001@gmail.com</a>
+        </div>
+        <div class="footer__col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="about.html">About</a><a href="shiro.html">Shiro</a><a href="resume.html">Résumé ↗</a>
+        </div>
+        <div class="footer__col">
+          <h4>Elsewhere</h4>
+          <a href="https://www.linkedin.com/in/vishal-mahendra" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://github.com/vishcooks" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="footer__base">
+        <span>© <span id="year"></span> Vishal Mahendra</span>
+        <span>Hand-built with HTML, CSS &amp; JavaScript · Cloudflare Pages</span>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>

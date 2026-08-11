@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0a0a0b"/>
-  <rect x="0.5" y="0.5" width="63" height="63" rx="13.5" fill="none" stroke="#6ee7a8" stroke-opacity="0.4"/>
-  <text x="32" y="42" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="26" font-weight="600"
-        text-anchor="middle" fill="#6ee7a8">VM</text>
+  <rect width="64" height="64" rx="15" fill="#4f46e5"/>
+  <text x="32" y="42" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="24" font-weight="700"
+        text-anchor="middle" fill="#ffffff">VM</text>
 </svg>

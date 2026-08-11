@@ -1,11 +1,11 @@
-# Dark theme matched to the portfolio (mint accent on near-black)
+# Light theme matched to the portfolio (indigo accent on white)
 [theme]
-base = "dark"
-primaryColor = "#6ee7a8"
-backgroundColor = "#0a0a0b"
-secondaryBackgroundColor = "#141417"
-textColor = "#ededea"
-font = "monospace"
+base = "light"
+primaryColor = "#4f46e5"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f4f5f8"
+textColor = "#101322"
+font = "sans serif"
 
 [browser]
 gatherUsageStats = false
