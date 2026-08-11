@@ -19,7 +19,7 @@ insight for leadership.
 - Documentation-first: tested metrics, lineage, and handoffs that let work progress 24/7
 - SnowPro Core · Microsoft PL-300 (Power BI Data Analyst Associate)
 
-**Live portfolio → [your-domain.pages.dev](https://your-domain.pages.dev)**  ·  **[LinkedIn](https://www.linkedin.com/in/vishal-mahendra)**
+**Live portfolio → [vishal-portfolio.vishbuilds.workers.dev](https://vishal-portfolio.vishbuilds.workers.dev/)**  ·  **[LinkedIn](https://www.linkedin.com/in/vishal-mahendra)**
 
 ---
 

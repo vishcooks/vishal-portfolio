@@ -3,7 +3,7 @@
 Personal portfolio site for **Vishal Mahendra — Analytics Engineer**.
 Multi-page, hand-built (no build step), with an embedded **live Streamlit dashboard**.
 
-- **Live site:** `https://<your-project>.pages.dev` (Cloudflare Pages)
+- **Live site:** [vishal-portfolio.vishbuilds.workers.dev](https://vishal-portfolio.vishbuilds.workers.dev/) (Cloudflare)
 - **Design:** light · minimalist · single indigo accent · Swiss grid · subtle motion
 - **Live demo:** `streamlit_app/` — Customer VOC & GTM command center on a DuckDB medallion model (bronze → silver → gold), embedded on Home & Projects
 - **Pages:** Home · Projects · About · Shiro · Résumé
