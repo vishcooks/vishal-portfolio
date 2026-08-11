@@ -149,9 +149,12 @@ strong { font-weight: 600; color: var(--ink); }
 .metric { border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; }
 .metric b { display: block; font-family: var(--ff-display); font-weight: 600; color: var(--accent); font-size: .98rem; }
 .metric span { font-family: var(--ff-mono); font-size: .62rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .05em; }
-.project__links { display: flex; gap: 14px; margin-top: 16px; }
+.project__links { display: flex; align-items: center; gap: 14px; margin-top: 16px; flex-wrap: wrap; }
 .project__links a { font-family: var(--ff-mono); font-size: .78rem; color: var(--ink-2); border-bottom: 1px solid transparent; transition: .2s; }
 .project__links a:hover { color: var(--accent); border-color: var(--accent); }
+.project__links a.btn { font-family: var(--ff-body); border-bottom: none; }
+.project__links a.btn--primary { color: #fff; }
+.project__links a.btn--primary:hover { color: #fff; border-color: transparent; }
 
 /* featured live demo */
 .demo { display: grid; grid-template-columns: .8fr 1.2fr; gap: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
