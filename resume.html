@@ -45,12 +45,11 @@
         </div>
       </div>
       <div class="resume__viewer reveal">
-        <object data="assets/resume.pdf#view=FitH" type="application/pdf" aria-label="Résumé PDF">
-          <div class="resume__fallback">
-            <p class="muted">Your browser can’t display the PDF inline (common on mobile).</p>
-            <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a>
-          </div>
-        </object>
+        <iframe src="assets/resume.pdf#view=FitH" type="application/pdf" aria-label="Résumé PDF" title="Résumé PDF"></iframe>
+        <div class="resume__fallback">
+          <p class="muted">Your browser can’t display the PDF inline (common on mobile).</p>
+          <a class="btn btn--primary" href="assets/resume.pdf" target="_blank" rel="noopener">Open résumé ↗</a>
+        </div>
       </div>
     </section>
   </main>
@@ -75,7 +74,6 @@
       </div>
       <div class="footer__base">
         <span>© <span id="year"></span> Vishal Mahendra</span>
-        <span>Hand-built with HTML, CSS &amp; JavaScript · Cloudflare Pages</span>
       </div>
     </div>
   </footer>

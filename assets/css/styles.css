@@ -286,9 +286,14 @@ strong { font-weight: 600; color: var(--ink); }
 /* ---------- resume viewer ---------- */
 .resume__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 26px; }
 .resume__actions { display: flex; gap: 12px; }
-.resume__viewer { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); }
-.resume__viewer object { width: 100%; height: 940px; display: block; border: 0; }
-.resume__fallback { min-height: 420px; display: grid; place-content: center; gap: 16px; text-align: center; padding: 40px; }
+.resume__viewer { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--surface); position: relative; min-height: 600px; }
+.resume__viewer iframe { width: 100%; height: 100%; min-height: 700px; border: 0; display: block; }
+.resume__fallback { position: absolute; inset: 0; display: grid; place-content: center; gap: 16px; text-align: center; padding: 40px; background: var(--surface); z-index: 1; }
+.resume__fallback { display: none; }
+@media (max-width: 768px) {
+  .resume__viewer iframe { display: none; }
+  .resume__fallback { display: grid; }
+}
 
 /* ---------- footer ---------- */
 .footer { background: var(--card); color: var(--card-ink); padding: 64px 0 28px; margin-top: 40px; }
