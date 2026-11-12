@@ -6,7 +6,7 @@ import { SlicerBar, useFilters } from "@/components/dash/filters";
 import { BigStat, DonutChart, HBarChart, TrendChart } from "@/components/dash/charts";
 import { DataTable, Pivot } from "@/components/dash/tables";
 import { groupSum, KpiGroup, PageTitle, Panel, standardKpis, sum } from "@/components/dash/ui";
-import { getProArchiveData } from "@/lib/data/proArchive";
+import { getPlatformData } from "@/lib/data/platform";
 import type { OppLine } from "@/lib/data/lines";
 import { money, MONTHS, pct } from "@/lib/format";
 import {
@@ -19,7 +19,7 @@ const EXEC_FILTERS = [fYear, fPType];
 const FULL_FILTERS = [fYear, fForecast, fAccount, fBU, fTeam, fPType, fPName, fChannel, fType, fIndustry];
 
 function ExecutiveSummary() {
-  const { lines, partners } = getProArchiveData();
+  const { lines, partners } = getPlatformData();
   const f = useFilters(lines, EXEC_FILTERS);
   const { pipe, book } = split(f.filtered);
 
@@ -36,7 +36,7 @@ function ExecutiveSummary() {
 
   return (
     <div className="grid gap-4">
-      <PageTitle title="Pro Arch Pipeline & Bookings · Exec Summary" note="Net ARR view" />
+      <PageTitle title="Platform Pipeline & Bookings · Exec Summary" note="Net ARR view" />
       <SlicerBar api={f} />
       <div className="grid gap-4 lg:grid-cols-2">
         <KpiGroup title="Pipeline" items={standardKpis(pipe, "arr")} />
@@ -73,13 +73,13 @@ function ExecutiveSummary() {
 }
 
 function Consolidated() {
-  const { lines } = getProArchiveData();
+  const { lines } = getPlatformData();
   const f = useFilters(lines, FULL_FILTERS);
   const { pipe, book } = split(f.filtered);
   const trend = useMemo(() => monthlyTrend(book, { "Net ARR": arr }), [book]);
   return (
     <div className="grid gap-4">
-      <PageTitle title="Pro Arch Bookings, Pipeline & Trend" />
+      <PageTitle title="Platform Bookings, Pipeline & Trend" />
       <SlicerBar api={f} />
       <div className="grid gap-4 lg:grid-cols-2">
         <KpiGroup title="Pipeline" items={standardKpis(pipe, "arr")} />
@@ -89,14 +89,14 @@ function Consolidated() {
         <TrendChart data={trend} x="month" series={["Net ARR"]} area height={260} />
       </Panel>
       <Panel title="Detailed View (Pipeline + Bookings)">
-        <DataTable rows={f.filtered} columns={DETAIL_COLS} title="pro-archive-detail" />
+        <DataTable rows={f.filtered} columns={DETAIL_COLS} title="platform-detail" />
       </Panel>
     </div>
   );
 }
 
-function AiSkus() {
-  const { lines } = getProArchiveData();
+function AiProducts() {
+  const { lines } = getPlatformData();
   const f = useFilters(lines, FULL_FILTERS);
   const { pipe, book } = split(f.filtered);
   const trend = useMemo(
@@ -111,25 +111,25 @@ function AiSkus() {
   const ai = sum(book.filter((r) => r.isAI), arr);
   return (
     <div className="grid gap-4">
-      <PageTitle title="AI SKUs Dashboard" />
+      <PageTitle title="AI Products Dashboard" />
       <SlicerBar api={f} />
       <div className="grid gap-4 lg:grid-cols-2">
         <KpiGroup title="Pipeline" items={standardKpis(pipe, "arr")} />
         <KpiGroup title="Bookings" tone="bookings" items={standardKpis(book, "arr")} />
       </div>
       <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-        <Panel title="AI vs Non-AI SKU Trend" subtitle="Monthly bookings, Net ARR">
+        <Panel title="AI vs Non-AI Product Trend" subtitle="Monthly bookings, Net ARR">
           <TrendChart data={trend} x="month" series={["AI ARR (Bookings)", "Non-AI ARR (Bookings)"]} height={260} />
         </Panel>
         <div className="grid content-start gap-4">
-          <BigStat label="AI SKU contribution" value={total ? pct(ai / total) : "–"} sub={`${money(ai)} of ${money(total)} booked ARR`} />
-          <Panel title="Top AI SKUs">
+          <BigStat label="AI product contribution" value={total ? pct(ai / total) : "–"} sub={`${money(ai)} of ${money(total)} booked ARR`} />
+          <Panel title="Top AI Products">
             <HBarChart data={groupSum(book.filter((r) => r.isAI), (r) => r.productName.replace("GenAI ", ""), arr)} height={150} labelWidth={120} />
           </Panel>
         </div>
       </div>
       <Panel title="Detailed View (Pipeline + Bookings)">
-        <DataTable rows={f.filtered.filter((r) => r.isAI)} columns={DETAIL_COLS} title="ai-skus-detail" />
+        <DataTable rows={f.filtered.filter((r) => r.isAI)} columns={DETAIL_COLS} title="ai-products-detail" />
       </Panel>
     </div>
   );
@@ -138,9 +138,9 @@ function AiSkus() {
 const PAGES: DashPage[] = [
   { id: "executive-summary", label: "Executive Summary", render: () => <ExecutiveSummary /> },
   { id: "consolidated-report", label: "Consolidated Report", render: () => <Consolidated /> },
-  { id: "ai-skus", label: "AI SKUs", render: () => <AiSkus /> },
+  { id: "ai-products", label: "AI Products", render: () => <AiProducts /> },
 ];
 
-export default function ProArchiveDashboard() {
-  return <DashboardShell title="Pro Archive Pipeline, Bookings & Churn.pbix" pages={PAGES} />;
+export default function PlatformDashboard() {
+  return <DashboardShell title="Platform Pipeline, Bookings & Churn" pages={PAGES} />;
 }

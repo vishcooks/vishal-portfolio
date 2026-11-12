@@ -18,20 +18,20 @@ npm start          # serve the production build
 
 ## Structure
 
-- `app/` — routes: `/`, `/projects/`, `/projects/pro-archive/`, `/projects/services-bookings/`, `/about/`, `/resume/`
-- `dashboards/` — the two interactive dashboards (one component per published Power BI page)
+- `app/` — routes: `/`, `/projects/`, `/projects/platform-revenue/`, `/projects/services-bookings/`, `/about/`, `/resume/`
+- `dashboards/` — the two interactive dashboards (one component per report page)
 - `components/dash/` — dashboard engine: slicers (`filters.tsx`), charts, pivot & detail tables, shell/tabs
 - `lib/data/` — seeded synthetic data generators (deterministic; no real customer/company figures)
 - `lib/site.ts` — all copy: projects, experience, skills, certifications
 
 ## Dashboards
 
-Only **published** pages from the source `.pbip` reports are rebuilt; pages marked `HiddenInViewMode`
-(duplicates, backups, WIP copies) are excluded.
+Every page is rendered on **fully synthetic, deterministic data** — no real customer, product or company
+information is used anywhere in the site.
 
-- Pro Archive Pipeline, Bookings & Churn — Executive Summary, Consolidated Report, AI SKUs
+- Platform Pipeline, Bookings & Churn — Executive Summary, Consolidated Report, AI Products
 - Services Bookings & Pipeline — Executive Summary, Consolidated Report, Opportunity Details, Weighted Forecast,
-  ASP & Work Orders, YoY ASP Breakup, Service Attach Rate (Unit), Service Attach Rate (Bookings $), CR&A,
-  Product Services Mapping
+  Prepaid Services & Work Orders, YoY Prepaid Breakup, Service Attach Rate (Unit), Service Attach Rate (Bookings $),
+  Analytics Suite, Product Services Mapping
 
 Deep-link to a tab with a hash, e.g. `/projects/services-bookings/#weighted-forecast`. Press `Ctrl/⌘ + K` anywhere for the command menu.

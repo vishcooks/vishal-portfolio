@@ -20,7 +20,7 @@ export default function About() {
       <section className="mx-auto grid max-w-7xl gap-14 px-5 py-20 md:px-8 lg:grid-cols-[1.3fr_1fr]">
         <Reveal className="space-y-5 text-[17px] leading-relaxed text-cream/75">
           <p>
-            I&apos;m an <b className="font-medium text-cream">Analytics Engineer at Smarsh</b>, embedded in the Product organization. I work with Product
+            I&apos;m an <b className="font-medium text-cream">Analytics Engineer at an enterprise SaaS company</b>, embedded in the Product organization. I work with Product
             Managers, Product Strategy and Engineering leadership to make GTM and product data trustworthy, documented and genuinely self-serve.
           </p>
           <p>

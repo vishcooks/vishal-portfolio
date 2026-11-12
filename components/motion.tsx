@@ -1,6 +1,6 @@
 "use client";
 
-import { animate, motion, useInView, useMotionValue, useSpring, useTransform } from "motion/react";
+import { animate, motion, useInView, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const ease = [0.22, 1, 0.36, 1] as const;
@@ -52,16 +52,14 @@ export function CountUp({ to, prefix = "", suffix = "", decimals = 0 }: { to: nu
 }
 
 export function PointerGlow() {
-  const x = useMotionValue(0.55);
-  const y = useMotionValue(0.45);
+  const x = useMotionValue(typeof window === "undefined" ? 0 : window.innerWidth * 0.55);
+  const y = useMotionValue(typeof window === "undefined" ? 0 : window.innerHeight * 0.45);
   const sx = useSpring(x, { stiffness: 40, damping: 18 });
   const sy = useSpring(y, { stiffness: 40, damping: 18 });
-  const left = useTransform(sx, (v) => `${v * 100}%`);
-  const top = useTransform(sy, (v) => `${v * 100}%`);
   useEffect(() => {
     const on = (e: PointerEvent) => {
-      x.set(e.clientX / window.innerWidth);
-      y.set(e.clientY / window.innerHeight);
+      x.set(e.clientX);
+      y.set(e.clientY);
     };
     window.addEventListener("pointermove", on, { passive: true });
     return () => window.removeEventListener("pointermove", on);
@@ -69,8 +67,14 @@ export function PointerGlow() {
   return (
     <motion.div
       aria-hidden
-      className="pointer-events-none absolute size-[42vmax] -translate-x-1/2 -translate-y-1/2 rounded-full bg-coral/45 blur-[90px] mix-blend-screen"
-      style={{ left, top }}
+      className="pointer-events-none absolute left-0 top-0 size-[42vmax] rounded-full will-change-transform"
+      style={{
+        x: sx,
+        y: sy,
+        translateX: "-50%",
+        translateY: "-50%",
+        background: "radial-gradient(closest-side, rgb(255 107 88 / 0.32), transparent 70%)",
+      }}
     />
   );
 }

@@ -22,7 +22,7 @@ export function ProjectLayout({ d, children }: { d: Dashboard; children: ReactNo
         <Reveal>{children}</Reveal>
         <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 px-2 text-xs text-cream/45">
           <span className="inline-flex items-center gap-1.5"><FlaskConical className="size-3.5 text-coral" /> 100% synthetic data — no customer or company figures</span>
-          <span className="inline-flex items-center gap-1.5"><Layers className="size-3.5" /> {d.pages.length} published pages from {d.source}</span>
+          <span className="inline-flex items-center gap-1.5"><Layers className="size-3.5" /> {d.pages.length} report pages · rebuilt on synthetic data</span>
           <span className="inline-flex items-center gap-1.5"><EyeOff className="size-3.5" /> Hidden, duplicate &amp; backup pages intentionally excluded</span>
         </p>
       </section>

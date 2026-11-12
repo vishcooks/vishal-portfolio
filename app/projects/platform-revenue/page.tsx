@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import ProArchiveDashboard from "@/dashboards/pro-archive/ProArchiveDashboard";
+import PlatformDashboard from "@/dashboards/platform/PlatformDashboard";
 import { DASHBOARDS } from "@/lib/site";
 
-const d = DASHBOARDS.find((x) => x.slug === "pro-archive")!;
+const d = DASHBOARDS.find((x) => x.slug === "platform-revenue")!;
 export const metadata: Metadata = { title: d.title, description: d.summary };
 
 export default function Page() {
   return (
     <ProjectLayout d={d}>
-      <ProArchiveDashboard />
+      <PlatformDashboard />
     </ProjectLayout>
   );
 }

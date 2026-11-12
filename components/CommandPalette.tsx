@@ -22,11 +22,11 @@ const slug = (s: string) =>
   ({
     "Service Attach Rate · Unit": "attach-unit",
     "Service Attach Rate · Bookings $": "attach-bookings",
-    "CR&A": "cra",
+    "Analytics Suite": "analytics-suite",
     "Product Services Mapping": "product-mapping",
-    "ASP & Work Orders": "asp-work-orders",
-    "YoY ASP Breakup": "yoy-asp",
-    "AI SKUs": "ai-skus",
+    "Prepaid Services & Work Orders": "prepaid-work-orders",
+    "YoY Prepaid Breakup": "yoy-prepaid",
+    "AI Products": "ai-products",
   })[s] ?? s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
 export function PaletteProvider({ children }: { children: ReactNode }) {

@@ -37,7 +37,7 @@ export function Hero() {
                 <span className="absolute inline-flex size-full animate-ping rounded-full bg-coral opacity-60" />
                 <span className="relative inline-flex size-2 rounded-full bg-coral" />
               </span>
-              Analytics Engineer @ Smarsh · Bengaluru
+              Analytics Engineer · Bengaluru, India
             </motion.p>
             <KineticHeadline
               delay={0.1}

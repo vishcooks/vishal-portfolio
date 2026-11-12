@@ -25,49 +25,47 @@ export interface Dashboard {
   impact: { value: string; label: string }[];
   stack: string[];
   pages: string[];
-  source: string;
 }
 
 export const DASHBOARDS: Dashboard[] = [
   {
-    slug: "pro-archive",
-    title: "Pro Archive Pipeline, Bookings & Churn",
-    kicker: "Revenue analytics · AI SKU adoption",
+    slug: "platform-revenue",
+    title: "Platform Pipeline, Bookings & Churn",
+    kicker: "Revenue analytics · AI product adoption",
     summary:
-      "One governed Power BI model that tells sales, finance and product leadership where Pro Archive revenue is coming from — booked, in-flight, and AI-driven.",
+      "One governed BI model that tells sales, finance and product leadership where platform revenue is coming from — booked, in-flight, and AI-driven.",
     problem:
-      "Pipeline, bookings and AI-SKU performance lived in separate CRM exports and spreadsheets, so every exec review started with a reconciliation exercise instead of a decision.",
+      "Pipeline, bookings and AI-add-on performance lived in separate CRM exports and spreadsheets, so every exec review started with a reconciliation exercise instead of a decision.",
     build: [
       "Star-schema semantic model over CRM opportunity + product-valuation lines with a shared Teams / BU key.",
       "Single Net ARR, OTF and TCV measure set reused across pipeline and bookings so the numbers tie out everywhere.",
-      "AI vs Non-AI SKU classification with a contribution % measure to track GenAI product traction month over month.",
+      "AI vs non-AI product classification with a contribution % measure to track GenAI traction month over month.",
       "Partner-revenue trend, industry mix and top-customer probability views for the exec summary.",
     ],
     impact: [
-      { value: "3", label: "published report pages" },
+      { value: "3", label: "report pages" },
       { value: "1", label: "measure layer for ARR / OTF / TCV" },
       { value: "10", label: "cross-filtering slicers" },
     ],
     stack: ["Power BI", "DAX", "Power Query (M)", "Snowflake", "Salesforce", "Star schema"],
-    pages: ["Executive Summary", "Consolidated Report", "AI SKUs"],
-    source: "Pro Archive Pipeline, Bookings & Churn.pbip",
+    pages: ["Executive Summary", "Consolidated Report", "AI Products"],
   },
   {
     slug: "services-bookings",
     title: "Services Bookings & Pipeline",
     kicker: "Services GTM · Forecasting · Attach rate",
     summary:
-      "The services org's operating dashboard: weighted forecast, attach rate, ASP draw-down and CR&A — ten published pages on one semantic model.",
+      "The services org's operating dashboard: weighted forecast, attach rate, prepaid draw-down and the analytics line — ten pages on one semantic model.",
     problem:
-      "Services leadership couldn't answer simple questions — what will we book this quarter, how often do product deals attach services, how much prepaid ASP is left — without days of manual work.",
+      "Services leadership couldn't answer simple questions — what will we book this quarter, how often do product deals attach services, how much prepaid delivery is left — without days of manual work.",
     build: [
       "Weighted bookings forecast (Closed 100% · Commit 90% · Best Case 55%) by asset and product type.",
       "Service attach-rate engine in both unit and bookings-$ flavours, with a field-parameter style Net ARR / OTF / ARR+OTF selector.",
-      "ASP & work-order draw-down tracking with year-over-year consumption splits from quote lines.",
+      "Prepaid package & work-order draw-down tracking with year-over-year consumption splits from quote lines.",
       "Product → services mapping hierarchy so every SKU rolls up to the right asset type and channel.",
     ],
     impact: [
-      { value: "10", label: "published report pages" },
+      { value: "10", label: "report pages" },
       { value: "4 yrs", label: "of attach-rate trend" },
       { value: "1", label: "weighted forecast number for leadership" },
     ],
@@ -77,14 +75,13 @@ export const DASHBOARDS: Dashboard[] = [
       "Consolidated Report",
       "Opportunity Details",
       "Weighted Forecast",
-      "ASP & Work Orders",
-      "YoY ASP Breakup",
+      "Prepaid Services & Work Orders",
+      "YoY Prepaid Breakup",
       "Service Attach Rate · Unit",
       "Service Attach Rate · Bookings $",
-      "CR&A",
+      "Analytics Suite",
       "Product Services Mapping",
     ],
-    source: "Services Bookings & Pipeline.pbip",
   },
 ];
 
@@ -144,7 +141,7 @@ export const SKILLS: Record<string, string[]> = {
 
 export const EXPERIENCE = [
   {
-    org: "Smarsh",
+    org: "Enterprise SaaS company",
     role: "Analytics Engineer",
     when: "Jan 2025 — Present",
     where: "Bengaluru",
@@ -156,7 +153,7 @@ export const EXPERIENCE = [
     ],
   },
   {
-    org: "Smarsh",
+    org: "Enterprise SaaS company",
     role: "Associate Agile Analyst",
     when: "Nov 2023 — Dec 2024",
     where: "Bengaluru",
@@ -166,14 +163,14 @@ export const EXPERIENCE = [
     ],
   },
   {
-    org: "Smarsh",
+    org: "Enterprise SaaS company",
     role: "Trainee Analyst",
     when: "Nov 2022 — Oct 2023",
     where: "Bengaluru",
     points: ["Owned 25+ production BI dashboards and automated their back-end pipelines — manual refresh overhead down 90%."],
   },
   {
-    org: "BYJU'S",
+    org: "Ed-tech company",
     role: "Academic & Operations Specialist",
     when: "Nov 2021 — Oct 2022",
     where: "Bengaluru",

@@ -124,13 +124,13 @@ function Stage({ index }: { index: number }) {
 }
 
 const RAW = [
-  ["0068x…A1", "Pro Arch - email ", "USD", "12,400", "Closed Won"],
-  ["0068x…A1", "Pro Arch - email ", "USD", "12,400", "Closed Won"],
-  ["0068x…B7", "ProArchive Email", "EUR", "9,850", "closed won"],
+  ["0068x…A1", "Core Plat - recs  ", "USD", "12,400", "Closed Won"],
+  ["0068x…A1", "Core Plat - recs  ", "USD", "12,400", "Closed Won"],
+  ["0068x…B7", "CorePlatform Records", "EUR", "9,850", "closed won"],
   ["0068x…C2", "PA-EML", "USD", "NULL", "Commit"],
-  ["0068x…D9", "Mobile Txt Capture", "GBP", "7,200", "Best case"],
+  ["0068x…D9", "Integration — Msg   ", "GBP", "7,200", "Best case"],
   ["0068x…E4", "AI Risk Scoring", "USD", "-3,100", "Closed Won"],
-  ["0068x…F0", "pro archive (email)", "USD", "15,000", "Pipeline"],
+  ["0068x…F0", "core platform (recs)", "USD", "15,000", "Pipeline"],
 ];
 
 function RawRows() {
