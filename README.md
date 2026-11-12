@@ -1,42 +1,37 @@
-# vishal-portfolio
+# Vishal Mahendra — Portfolio
 
-Personal portfolio site for **Vishal Mahendra — Analytics Engineer**.
-Multi-page, hand-built (no build step), with an embedded **live Streamlit dashboard**.
-
-- **Live site:** [vishal-portfolio.vishbuilds.workers.dev](https://vishal-portfolio.vishbuilds.workers.dev/) (Cloudflare)
-- **Design:** light · minimalist · single indigo accent · Swiss grid · subtle motion
-- **Live demo:** `streamlit_app/` — Customer VOC & GTM command center on a DuckDB medallion model (bronze → silver → gold), embedded on Home & Projects
-- **Pages:** Home · Projects · About · Shiro · Résumé
-
-## Structure
-```
-index.html                 # Home (hero + architecture card + selected work)
-projects.html              # Projects (filters + featured live demo + cards)
-about.html                 # About (bio + skills + certs + education)
-shiro.html                 # Shiro (pet page; drop assets/img/shiro.jpg)
-resume.html                # Résumé (embedded PDF)
-assets/css/styles.css      # design system
-assets/js/main.js          # reveal, count-up, mobile nav, project filters
-assets/img/favicon.svg
-assets/resume.pdf          # résumé PDF
-streamlit_app/             # embeddable SQL/BI dashboard
-github-profile/README.md   # profile README template
-projects/                  # per-project case-study READMEs
-DEPLOY.md                  # full deploy runbook
-CONTENT.md                 # placeholders to replace + copy notes
-```
+Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS v4 · Motion · Recharts.
 
 ## Run locally
-```powershell
-# static site
-py -m http.server 5173
-# then open http://localhost:5173
 
-# streamlit dashboard (optional)
-cd streamlit_app
-py -m pip install -r requirements.txt
-py -m streamlit run app.py
+```bash
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (all routes prerendered as static)
+npm start          # serve the production build
 ```
 
-## Deploy
-See **[DEPLOY.md](DEPLOY.md)** — GitHub → Cloudflare Pages, Streamlit Community Cloud, custom domain, embeds.
+## Deploy (Vercel)
+
+1. Push this folder to a GitHub repo.
+2. In Vercel: **Add New → Project → Import** the repo. Framework preset: Next.js. No env vars needed.
+
+## Structure
+
+- `app/` — routes: `/`, `/projects/`, `/projects/pro-archive/`, `/projects/services-bookings/`, `/about/`, `/resume/`
+- `dashboards/` — the two interactive dashboards (one component per published Power BI page)
+- `components/dash/` — dashboard engine: slicers (`filters.tsx`), charts, pivot & detail tables, shell/tabs
+- `lib/data/` — seeded synthetic data generators (deterministic; no real customer/company figures)
+- `lib/site.ts` — all copy: projects, experience, skills, certifications
+
+## Dashboards
+
+Only **published** pages from the source `.pbip` reports are rebuilt; pages marked `HiddenInViewMode`
+(duplicates, backups, WIP copies) are excluded.
+
+- Pro Archive Pipeline, Bookings & Churn — Executive Summary, Consolidated Report, AI SKUs
+- Services Bookings & Pipeline — Executive Summary, Consolidated Report, Opportunity Details, Weighted Forecast,
+  ASP & Work Orders, YoY ASP Breakup, Service Attach Rate (Unit), Service Attach Rate (Bookings $), CR&A,
+  Product Services Mapping
+
+Deep-link to a tab with a hash, e.g. `/projects/services-bookings/#weighted-forecast`. Press `Ctrl/⌘ + K` anywhere for the command menu.

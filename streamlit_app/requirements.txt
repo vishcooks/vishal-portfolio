@@ -1,6 +1,0 @@
-# Streamlit already ships pandas, numpy and altair as dependencies,
-# so we only pin streamlit itself and the one extra library (duckdb).
-# Lower-bound pins let Streamlit Cloud grab prebuilt wheels for its Python
-# version, which avoids slow source builds / resolver stalls.
-streamlit>=1.37
-duckdb>=1.1
