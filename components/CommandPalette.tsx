@@ -23,7 +23,6 @@ const slug = (s: string) =>
     "Service Attach Rate · Unit": "attach-unit",
     "Service Attach Rate · Bookings $": "attach-bookings",
     "Analytics Suite": "analytics-suite",
-    "Product Services Mapping": "product-mapping",
     "Prepaid Services & Work Orders": "prepaid-work-orders",
     "YoY Prepaid Breakup": "yoy-prepaid",
     "AI Products": "ai-products",

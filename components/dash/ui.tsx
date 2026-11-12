@@ -85,14 +85,14 @@ export function standardKpis(rows: MoneyRow[], variant: "arr" | "services") {
   return variant === "arr"
     ? [
         { label: "Net ARR", value: money(arr) },
-        { label: "OTF", value: money(otf) },
-        { label: "TCV", value: money(sum(rows, (r) => r.tcv)) },
+        { label: "One-Time Fees", value: money(otf) },
+        { label: "Contract Value", value: money(sum(rows, (r) => r.tcv)) },
         { label: "Customers", value: num(distinct(rows, (r) => r.account)) },
       ]
     : [
         { label: "Net Services ARR", value: money(arr) },
-        { label: "OTF", value: money(otf) },
-        { label: "Net ARR + OTF", value: money(arr + otf) },
+        { label: "One-Time Fees", value: money(otf) },
+        { label: "Net ARR + Fees", value: money(arr + otf) },
         { label: "Customers", value: num(distinct(rows, (r) => r.account)) },
       ];
 }

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { ArrowLeft, ArrowRight, EyeOff, FlaskConical, Layers } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { PageHero } from "./PageHero";
 import { Reveal } from "./Reveal";
 import { DASHBOARDS, type Dashboard } from "@/lib/site";
@@ -20,11 +20,6 @@ export function ProjectLayout({ d, children }: { d: Dashboard; children: ReactNo
 
       <section className="mx-auto max-w-[1440px] px-3 pb-6 md:px-6" id="dashboard">
         <Reveal>{children}</Reveal>
-        <p className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 px-2 text-xs text-cream/45">
-          <span className="inline-flex items-center gap-1.5"><FlaskConical className="size-3.5 text-coral" /> 100% synthetic data — no customer or company figures</span>
-          <span className="inline-flex items-center gap-1.5"><Layers className="size-3.5" /> {d.pages.length} report pages · rebuilt on synthetic data</span>
-          <span className="inline-flex items-center gap-1.5"><EyeOff className="size-3.5" /> Hidden, duplicate &amp; backup pages intentionally excluded</span>
-        </p>
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-12 px-5 py-20 md:px-8 lg:grid-cols-[1fr_1.4fr]">

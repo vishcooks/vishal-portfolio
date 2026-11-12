@@ -38,7 +38,7 @@ export const DASHBOARDS: Dashboard[] = [
       "Pipeline, bookings and AI-add-on performance lived in separate CRM exports and spreadsheets, so every exec review started with a reconciliation exercise instead of a decision.",
     build: [
       "Star-schema semantic model over CRM opportunity + product-valuation lines with a shared Teams / BU key.",
-      "Single Net ARR, OTF and TCV measure set reused across pipeline and bookings so the numbers tie out everywhere.",
+      "Single measure layer — net ARR (annual recurring revenue), one-time fees (OTF) and total contract value (TCV) — reused across pipeline and bookings so the numbers tie out everywhere.",
       "AI vs non-AI product classification with a contribution % measure to track GenAI traction month over month.",
       "Partner-revenue trend, industry mix and top-customer probability views for the exec summary.",
     ],
@@ -55,17 +55,17 @@ export const DASHBOARDS: Dashboard[] = [
     title: "Services Bookings & Pipeline",
     kicker: "Services GTM · Forecasting · Attach rate",
     summary:
-      "The services org's operating dashboard: weighted forecast, attach rate, prepaid draw-down and the analytics line — ten pages on one semantic model.",
+      "The services org's operating dashboard: weighted forecast, attach rate, prepaid draw-down and the analytics line — nine pages on one semantic model.",
     problem:
       "Services leadership couldn't answer simple questions — what will we book this quarter, how often do product deals attach services, how much prepaid delivery is left — without days of manual work.",
     build: [
       "Weighted bookings forecast (Closed 100% · Commit 90% · Best Case 55%) by asset and product type.",
-      "Service attach-rate engine in both unit and bookings-$ flavours, with a field-parameter style Net ARR / OTF / ARR+OTF selector.",
+      "Service attach-rate engine in both unit and bookings-$ flavours, with a field-parameter style Net ARR / one-time fees / combined selector.",
       "Prepaid package & work-order draw-down tracking with year-over-year consumption splits from quote lines.",
       "Product → services mapping hierarchy so every SKU rolls up to the right asset type and channel.",
     ],
     impact: [
-      { value: "10", label: "report pages" },
+      { value: "9", label: "report pages" },
       { value: "4 yrs", label: "of attach-rate trend" },
       { value: "1", label: "weighted forecast number for leadership" },
     ],
@@ -80,7 +80,6 @@ export const DASHBOARDS: Dashboard[] = [
       "Service Attach Rate · Unit",
       "Service Attach Rate · Bookings $",
       "Analytics Suite",
-      "Product Services Mapping",
     ],
   },
 ];

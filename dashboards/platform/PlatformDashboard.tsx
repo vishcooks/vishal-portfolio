@@ -6,6 +6,7 @@ import { SlicerBar, useFilters } from "@/components/dash/filters";
 import { BigStat, DonutChart, HBarChart, TrendChart } from "@/components/dash/charts";
 import { DataTable, Pivot } from "@/components/dash/tables";
 import { groupSum, KpiGroup, PageTitle, Panel, standardKpis, sum } from "@/components/dash/ui";
+import { AskData, genInsights, InsightStrip, RiskPanel } from "@/components/dash/ai";
 import { getPlatformData } from "@/lib/data/platform";
 import type { OppLine } from "@/lib/data/lines";
 import { money, MONTHS, pct } from "@/lib/format";
@@ -36,11 +37,16 @@ function ExecutiveSummary() {
 
   return (
     <div className="grid gap-4">
-      <PageTitle title="Platform Pipeline & Bookings · Exec Summary" note="Net ARR view" />
+      <PageTitle title="Platform Pipeline & Bookings · Exec Summary" note="ARR = annual recurring revenue · OTF = one-time fees · TCV = total contract value" />
       <SlicerBar api={f} />
       <div className="grid gap-4 lg:grid-cols-2">
         <KpiGroup title="Pipeline" items={standardKpis(pipe, "arr")} />
         <KpiGroup title="Bookings" tone="bookings" items={standardKpis(book, "arr")} />
+      </div>
+      <InsightStrip insights={genInsights(f.filtered)} />
+      <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+        <AskData lines={f.filtered} />
+        <RiskPanel lines={f.filtered} />
       </div>
       <div className="grid gap-4 lg:grid-cols-[1.2fr_1fr]">
         <Panel title="Revenue by Partner 2025" subtitle="Monthly partner-sourced revenue">

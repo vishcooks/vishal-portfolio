@@ -32,6 +32,6 @@ information is used anywhere in the site.
 - Platform Pipeline, Bookings & Churn — Executive Summary, Consolidated Report, AI Products
 - Services Bookings & Pipeline — Executive Summary, Consolidated Report, Opportunity Details, Weighted Forecast,
   Prepaid Services & Work Orders, YoY Prepaid Breakup, Service Attach Rate (Unit), Service Attach Rate (Bookings $),
-  Analytics Suite, Product Services Mapping
+  Analytics Suite
 
 Deep-link to a tab with a hash, e.g. `/projects/services-bookings/#weighted-forecast`. Press `Ctrl/⌘ + K` anywhere for the command menu.
